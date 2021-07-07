@@ -40,7 +40,7 @@ module.exports.authenthicateUser = async (req, res, next) => {
         },
         secret,
         {
-          expiresIn: 3600,
+          expiresIn: 3600 * 5,
         },
         (err, token) => {
           if (err) console.error(err);
